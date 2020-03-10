@@ -71,9 +71,11 @@ How to build
 Source code is divided into class files (dev/src/*.js). These files include multi-language comments. You can build enchant.js with 'grunt' command from these files.
 If you want to send a pull request or join development enchant.js, please edit files under dev/src, use this build tool and commit the built work tree.
 
+The build might have to be run with Node `v4.9.1`.
+
 To setup grunt.js (build tool for node.js) as npm package, type:
 
-    npm install -g grunt-cli
+    npm install -g grunt-cli@0.1.13
     npm install
 
 You additionally need [phantomjs](http://code.google.com/p/phantomjs/) to run qunit test in grunt.js.
