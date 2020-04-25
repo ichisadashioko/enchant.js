@@ -78,6 +78,15 @@ To setup grunt.js (build tool for node.js) as npm package, type:
     npm install -g grunt-cli@0.1.13
     npm install
 
+- Install `nvm`
+
+```bash
+nvm install 4.9.1
+npm install -g grunt-cli@0.1.13
+npm install
+grunt --force
+```
+
 You additionally need [phantomjs](http://code.google.com/p/phantomjs/) to run qunit test in grunt.js.
 
 Build Tasks
