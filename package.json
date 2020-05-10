@@ -10,7 +10,7 @@
     "node": "0.10"
   },
   "scripts": {
-    "test": "grunt default --verbose"
+    "test": "grunt default --verbose --force"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
