@@ -20,11 +20,14 @@ jobs:
     - run: npm install -g grunt-cli@0.1.13
     - run: npm install
     - run: npm test
-    - run: rm -r node_modules
+
+    # create artifact
+    - run: mkdir -p artifact
+    - rsync -av --progress . ./artifact --exclude artifact --exclude node_modules --exclude .git
     - run: sudo apt install tree
-    - run: tree
+    - run: tree artifact
     - uses: actions/upload-artifact@v2
       with:
         name: enchantjs-${{ github.sha }}
         # TODO update when update-artifact allow exluding files
-        path: . # include the examples
+        path: artifact # include all the examples
