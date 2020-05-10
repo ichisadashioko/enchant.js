@@ -23,7 +23,7 @@ jobs:
 
     # create artifact
     - run: mkdir -p artifact
-    - rsync -av --progress . ./artifact --exclude artifact --exclude node_modules --exclude .git
+    - run: rsync -av --progress . ./artifact --exclude artifact --exclude node_modules --exclude .git
     - run: sudo apt install tree
     - run: tree artifact
     - uses: actions/upload-artifact@v2
