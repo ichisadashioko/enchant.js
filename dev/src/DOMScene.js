@@ -2,6 +2,7 @@
  * @scope enchant.DOMScene.prototype
  */
 enchant.DOMScene = enchant.Class.create(enchant.Scene, {
+    __classname__: 'enchant.DOMScene',
     /**
      * @name enchant.DOMScene
      * @class

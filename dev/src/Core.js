@@ -4,6 +4,7 @@
      * @scope enchant.Core.prototype
      */
     enchant.Core = enchant.Class.create(enchant.EventTarget, {
+        __classname__: 'enchant.Core',
         /**
          * @name enchant.Core
          * @class

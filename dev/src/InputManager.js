@@ -2,6 +2,7 @@
  * @scope enchant.InputManager.prototype
  */
 enchant.InputManager = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.InputManager',
     /**
      * @name enchant.InputManager
      * @class

@@ -2,6 +2,7 @@
  * @scope enchant.Scene.prototype
  */
 enchant.Scene = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.Scene',
     /**
      * @name enchant.Scene
      * @class

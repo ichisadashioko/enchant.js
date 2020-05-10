@@ -2,6 +2,7 @@
  * @scope enchant.Event.prototype
  */
 enchant.Event = enchant.Class.create({
+    __classname__: 'enchant.Event',
     /**
      * @name enchant.Event
      * @class

@@ -1,4 +1,5 @@
 enchant.Matrix = enchant.Class.create({
+    __classname__: 'enchant.Matrix',
     initialize: function() {
         this.reset();
     },

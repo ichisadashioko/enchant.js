@@ -2,6 +2,7 @@
  * @scope enchant.Tween.prototype
  */
 enchant.Tween = enchant.Class.create(enchant.Action, {
+    __classname__: 'enchant.Tween',
     /**
      * @name enchant.Tween
      * @class

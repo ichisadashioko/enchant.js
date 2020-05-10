@@ -2,6 +2,7 @@
  * @scope enchant.KeyboardInputManager.prototype
  */
 enchant.KeyboardInputManager = enchant.Class.create(enchant.BinaryInputManager, {
+    __classname__: 'enchant.KeyboardInputManager',
     /**
      * @name enchant.KeyboardInputManager
      * @class

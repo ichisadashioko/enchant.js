@@ -1,4 +1,5 @@
 enchant.DomManager = enchant.Class.create({
+    __classname__: 'enchant.DomManager',
     initialize: function(node, elementDefinition) {
         var core = enchant.Core.instance;
         this.layer = null;
@@ -164,6 +165,7 @@ enchant.DomManager = enchant.Class.create({
 });
 
 enchant.DomlessManager = enchant.Class.create({
+    __classname__: 'enchant.DomlessManager',
     initialize: function(node) {
         this._domRef = [];
         this.targetNode = node;

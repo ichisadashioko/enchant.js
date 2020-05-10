@@ -2,6 +2,7 @@
  * @scope enchant.BinaryInputSource.prototype
  */
 enchant.BinaryInputSource = enchant.Class.create(enchant.InputSource, {
+    __classname__: 'enchant.BinaryInputSource',
     /**
      * @name enchant.BinaryInputSource
      * @class

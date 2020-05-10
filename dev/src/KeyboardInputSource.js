@@ -2,6 +2,7 @@
  * @scope enchant.KeyboardInputSource.prototype
  */
 enchant.KeyboardInputSource = enchant.Class.create(enchant.BinaryInputSource, {
+    __classname__: 'enchant.KeyboardInputSource',
     /**
      * @name enchant.KeyboardInputSource
      * @class

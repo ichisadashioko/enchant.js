@@ -2,6 +2,7 @@
  * @scope enchant.DOMSound.prototype
  */
 enchant.DOMSound = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.DOMSound',
     /**
      * @name enchant.DOMSound
      * @class

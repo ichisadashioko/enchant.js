@@ -1,4 +1,5 @@
 enchant.DetectColorManager = enchant.Class.create({
+    __classname__: 'enchant.DetectColorManager',
     initialize: function(reso, max) {
         this.reference = [];
         this.colorResolution = reso || 16;

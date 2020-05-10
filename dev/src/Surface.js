@@ -2,6 +2,7 @@
  * @scope enchant.Surface.prototype
  */
 enchant.Surface = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.Surface',
     /**
      * @name enchant.Surface
      * @class

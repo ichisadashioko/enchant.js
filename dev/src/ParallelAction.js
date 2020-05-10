@@ -2,6 +2,7 @@
  * @scope enchant.ParallelAction.prototype
  */
 enchant.ParallelAction = enchant.Class.create(enchant.Action, {
+    __classname__: 'enchant.ParallelAction',
     /**
      * @name enchant.ParallelAction
      * @class

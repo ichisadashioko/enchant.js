@@ -1,4 +1,5 @@
 enchant.DomLayer = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.DomLayer',
     initialize: function() {
         var core = enchant.Core.instance;
         enchant.Group.call(this);

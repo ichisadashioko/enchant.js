@@ -2,6 +2,7 @@
  * @scope enchant.Timeline.prototype
  */
 enchant.Timeline = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.Timeline',
     /**
      * @name enchant.Timeline
      * @class

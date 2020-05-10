@@ -2,6 +2,7 @@
  * @scope enchant.CanvasLayer.prototype
  */
 enchant.CanvasLayer = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.CanvasLayer',
     /**
      * @name enchant.CanvasLayer
      * @class

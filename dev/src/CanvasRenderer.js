@@ -1,4 +1,5 @@
 enchant.CanvasRenderer = enchant.Class.create({
+    __classname__: 'enchant.CanvasRenderer',
     render: function(ctx, node, e) {
         var width, height, child;
         ctx.save();

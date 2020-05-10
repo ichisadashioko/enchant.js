@@ -76,6 +76,7 @@ var _nodePrototypeClearEventListener = enchant.Node.prototype.clearEventListener
  * @scope enchant.Entity.prototype
  */
 enchant.Entity = enchant.Class.create(enchant.Node, {
+    __classname__: 'enchant.Entity',
     /**
      * @name enchant.Entity
      * @class

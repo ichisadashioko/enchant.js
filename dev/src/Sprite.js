@@ -2,6 +2,7 @@
  * @scope enchant.Sprite.prototype
  */
 enchant.Sprite = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Sprite',
     /**
      * @name enchant.Sprite
      * @class

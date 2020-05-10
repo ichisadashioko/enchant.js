@@ -2,6 +2,7 @@
  * @scope enchant.BinaryInputManager.prototype
  */
 enchant.BinaryInputManager = enchant.Class.create(enchant.InputManager, {
+    __classname__: 'enchant.BinaryInputManager',
     /**
      * @name enchant.BinaryInputManager
      * @class

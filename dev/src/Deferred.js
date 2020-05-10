@@ -5,6 +5,7 @@ if (window.Deferred) {
      * @scope enchant.Deferred.prototype
      */
     enchant.Deferred = enchant.Class.create({
+        __classname__: 'enchant.Deferred',
         /**
          * @name enchant.Deferred
          * @class

@@ -2,6 +2,7 @@
  * @scope enchant.Map.prototype
  */
 enchant.Map = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Map',
     /**
      * @name enchant.Map
      * @class

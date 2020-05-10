@@ -2,6 +2,7 @@
  * @scope enchant.Group.prototype
  */
 enchant.Group = enchant.Class.create(enchant.Node, {
+    __classname__: 'enchant.Group',
     /**
      * @name enchant.Group
      * @class

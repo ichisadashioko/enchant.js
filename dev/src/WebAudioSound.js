@@ -4,6 +4,7 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext || window
  * @scope enchant.WebAudioSound.prototype
  */
 enchant.WebAudioSound = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.WebAudioSound',
     /**
      * @name enchant.WebAudioSound
      * @class

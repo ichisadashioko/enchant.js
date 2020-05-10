@@ -2,6 +2,7 @@
  * @scope enchant.Label.prototype
  */
 enchant.Label = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Label',
     /**
      * @name enchant.Label
      * @class

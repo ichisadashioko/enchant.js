@@ -2,6 +2,7 @@
  * @scope enchant.InputSource.prototype
  */
 enchant.InputSource = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.InputSource',
     /**
      * @name enchant.InputSource
      * @class

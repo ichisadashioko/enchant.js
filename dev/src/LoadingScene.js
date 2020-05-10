@@ -2,6 +2,7 @@
  * @scope enchant.LoadingScene.prototype
  */
 enchant.LoadingScene = enchant.Class.create(enchant.Scene, {
+    __classname__: 'enchant.LoadingScene',
     /**
      * @name enchant.LoadingScene
      * @class
