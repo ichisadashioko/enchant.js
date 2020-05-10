@@ -8,9 +8,3 @@ before_script:
 notifications:
   email:
     - "ichisadashioko@gmail.com"
-  irc:
-    channels:
-      - "irc.freenode.org#enchantjs"
-    template:
-      - "%{repository} (%{commit}) : %{message} %{foo} "
-      - "Build details: %{build_url}"
