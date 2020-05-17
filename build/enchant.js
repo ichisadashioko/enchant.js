@@ -701,6 +701,7 @@ enchant.ENV = {
  * @scope enchant.Event.prototype
  */
 enchant.Event = enchant.Class.create({
+    __classname__: 'enchant.Event',
     /**
      * @name enchant.Event
      * @class
@@ -1547,6 +1548,7 @@ enchant.Event.ANIMATION_END = "animationend";
  * @scope enchant.EventTarget.prototype
  */
 enchant.EventTarget = enchant.Class.create({
+    __classname__: 'enchant.EventTarget',
     /**
      * @name enchant.EventTarget
      * @class
@@ -1707,6 +1709,7 @@ enchant.EventTarget = enchant.Class.create({
      * @scope enchant.Core.prototype
      */
     enchant.Core = enchant.Class.create(enchant.EventTarget, {
+        __classname__: 'enchant.Core',
         /**
          * @name enchant.Core
          * @class
@@ -3022,6 +3025,7 @@ enchant.Game = enchant.Core;
  * @scope enchant.InputManager.prototype
  */
 enchant.InputManager = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.InputManager',
     /**
      * @name enchant.InputManager
      * @class
@@ -3204,6 +3208,7 @@ enchant.InputManager = enchant.Class.create(enchant.EventTarget, {
  * @scope enchant.InputSource.prototype
  */
 enchant.InputSource = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.InputSource',
     /**
      * @name enchant.InputSource
      * @class
@@ -3261,6 +3266,7 @@ enchant.InputSource = enchant.Class.create(enchant.EventTarget, {
  * @scope enchant.BinaryInputManager.prototype
  */
 enchant.BinaryInputManager = enchant.Class.create(enchant.InputManager, {
+    __classname__: 'enchant.BinaryInputManager',
     /**
      * @name enchant.BinaryInputManager
      * @class
@@ -3419,6 +3425,7 @@ enchant.BinaryInputManager = enchant.Class.create(enchant.InputManager, {
  * @scope enchant.BinaryInputSource.prototype
  */
 enchant.BinaryInputSource = enchant.Class.create(enchant.InputSource, {
+    __classname__: 'enchant.BinaryInputSource',
     /**
      * @name enchant.BinaryInputSource
      * @class
@@ -3445,6 +3452,7 @@ enchant.BinaryInputSource = enchant.Class.create(enchant.InputSource, {
  * @scope enchant.KeyboardInputManager.prototype
  */
 enchant.KeyboardInputManager = enchant.Class.create(enchant.BinaryInputManager, {
+    __classname__: 'enchant.KeyboardInputManager',
     /**
      * @name enchant.KeyboardInputManager
      * @class
@@ -3524,6 +3532,7 @@ enchant.KeyboardInputManager = enchant.Class.create(enchant.BinaryInputManager, 
  * @scope enchant.KeyboardInputSource.prototype
  */
 enchant.KeyboardInputSource = enchant.Class.create(enchant.BinaryInputSource, {
+    __classname__: 'enchant.KeyboardInputSource',
     /**
      * @name enchant.KeyboardInputSource
      * @class
@@ -3575,6 +3584,7 @@ enchant.KeyboardInputSource.getByKeyCode = function(keyCode) {
  * @scope enchant.Node.prototype
  */
 enchant.Node = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.Node',
     /**
      * @name enchant.Node
      * @class
@@ -3883,6 +3893,7 @@ var _nodePrototypeClearEventListener = enchant.Node.prototype.clearEventListener
  * @scope enchant.Entity.prototype
  */
 enchant.Entity = enchant.Class.create(enchant.Node, {
+    __classname__: 'enchant.Entity',
     /**
      * @name enchant.Entity
      * @class
@@ -4596,6 +4607,7 @@ enchant.Entity._inherited = function(subclass) {
  * @scope enchant.Sprite.prototype
  */
 enchant.Sprite = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Sprite',
     /**
      * @name enchant.Sprite
      * @class
@@ -4873,6 +4885,7 @@ enchant.Sprite = enchant.Class.create(enchant.Entity, {
  * @scope enchant.Label.prototype
  */
 enchant.Label = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Label',
     /**
      * @name enchant.Label
      * @class
@@ -5118,6 +5131,7 @@ enchant.Label = enchant.Class.create(enchant.Entity, {
  * @scope enchant.Map.prototype
  */
 enchant.Map = enchant.Class.create(enchant.Entity, {
+    __classname__: 'enchant.Map',
     /**
      * @name enchant.Map
      * @class
@@ -5581,6 +5595,7 @@ enchant.Map = enchant.Class.create(enchant.Entity, {
  * @scope enchant.Group.prototype
  */
 enchant.Group = enchant.Class.create(enchant.Node, {
+    __classname__: 'enchant.Group',
     /**
      * @name enchant.Group
      * @class
@@ -5943,6 +5958,7 @@ enchant.Group = enchant.Class.create(enchant.Node, {
 });
 
 enchant.Matrix = enchant.Class.create({
+    __classname__: 'enchant.Matrix',
     initialize: function() {
         this.reset();
     },
@@ -5998,6 +6014,7 @@ enchant.Matrix = enchant.Class.create({
 enchant.Matrix.instance = new enchant.Matrix();
 
 enchant.DetectColorManager = enchant.Class.create({
+    __classname__: 'enchant.DetectColorManager',
     initialize: function(reso, max) {
         this.reference = [];
         this.colorResolution = reso || 16;
@@ -6062,6 +6079,7 @@ enchant.DetectColorManager = enchant.Class.create({
 });
 
 enchant.DomManager = enchant.Class.create({
+    __classname__: 'enchant.DomManager',
     initialize: function(node, elementDefinition) {
         var core = enchant.Core.instance;
         this.layer = null;
@@ -6227,6 +6245,7 @@ enchant.DomManager = enchant.Class.create({
 });
 
 enchant.DomlessManager = enchant.Class.create({
+    __classname__: 'enchant.DomlessManager',
     initialize: function(node) {
         this._domRef = [];
         this.targetNode = node;
@@ -6337,6 +6356,7 @@ enchant.DomlessManager = enchant.Class.create({
 });
 
 enchant.DomLayer = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.DomLayer',
     initialize: function() {
         var core = enchant.Core.instance;
         enchant.Group.call(this);
@@ -6519,6 +6539,7 @@ enchant.DomLayer._detachDomManager = function(node, onchildadded, onchildremoved
  * @scope enchant.CanvasLayer.prototype
  */
 enchant.CanvasLayer = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.CanvasLayer',
     /**
      * @name enchant.CanvasLayer
      * @class
@@ -6775,6 +6796,7 @@ enchant.CanvasLayer._detachCache = function(node, layer, onchildadded, onchildre
 };
 
 enchant.CanvasRenderer = enchant.Class.create({
+    __classname__: 'enchant.CanvasRenderer',
     render: function(ctx, node, e) {
         var width, height, child;
         ctx.save();
@@ -6877,6 +6899,7 @@ enchant.CanvasRenderer.instance = new enchant.CanvasRenderer();
  * @scope enchant.Scene.prototype
  */
 enchant.Scene = enchant.Class.create(enchant.Group, {
+    __classname__: 'enchant.Scene',
     /**
      * @name enchant.Scene
      * @class
@@ -7132,6 +7155,7 @@ enchant.Scene = enchant.Class.create(enchant.Group, {
  * @scope enchant.LoadingScene.prototype
  */
 enchant.LoadingScene = enchant.Class.create(enchant.Scene, {
+    __classname__: 'enchant.LoadingScene',
     /**
      * @name enchant.LoadingScene
      * @class
@@ -7203,6 +7227,7 @@ enchant.LoadingScene = enchant.Class.create(enchant.Scene, {
  * @scope enchant.CanvasScene.prototype
  */
 enchant.CanvasScene = enchant.Class.create(enchant.Scene, {
+    __classname__: 'enchant.CanvasScene',
     /**
      * @name enchant.CanvasScene
      * @class
@@ -7248,6 +7273,7 @@ enchant.CanvasScene = enchant.Class.create(enchant.Scene, {
  * @scope enchant.DOMScene.prototype
  */
 enchant.DOMScene = enchant.Class.create(enchant.Scene, {
+    __classname__: 'enchant.DOMScene',
     /**
      * @name enchant.DOMScene
      * @class
@@ -7293,6 +7319,7 @@ enchant.DOMScene = enchant.Class.create(enchant.Scene, {
  * @scope enchant.Surface.prototype
  */
 enchant.Surface = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.Surface',
     /**
      * @name enchant.Surface
      * @class
@@ -7704,6 +7731,7 @@ if (window.Deferred) {
      * @scope enchant.Deferred.prototype
      */
     enchant.Deferred = enchant.Class.create({
+        __classname__: 'enchant.Deferred',
         /**
          * @name enchant.Deferred
          * @class
@@ -7960,6 +7988,7 @@ if (window.Deferred) {
  * @scope enchant.DOMSound.prototype
  */
 enchant.DOMSound = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.DOMSound',
     /**
      * @name enchant.DOMSound
      * @class
@@ -8249,6 +8278,7 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext || window
  * @scope enchant.WebAudioSound.prototype
  */
 enchant.WebAudioSound = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.WebAudioSound',
     /**
      * @name enchant.WebAudioSound
      * @class
@@ -8795,6 +8825,7 @@ enchant.Easing = {
  * @scope enchant.ActionEventTarget.prototype
  */
 enchant.ActionEventTarget = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.ActionEventTarget',
     /**
      * @name enchant.ActionEventTarget
      * @class
@@ -8836,6 +8867,7 @@ enchant.ActionEventTarget = enchant.Class.create(enchant.EventTarget, {
  * @scope enchant.Timeline.prototype
  */
 enchant.Timeline = enchant.Class.create(enchant.EventTarget, {
+    __classname__: 'enchant.Timeline',
     /**
      * @name enchant.Timeline
      * @class
@@ -9824,6 +9856,7 @@ enchant.Timeline = enchant.Class.create(enchant.EventTarget, {
  * @scope enchant.Action.prototype
  */
 enchant.Action = enchant.Class.create(enchant.ActionEventTarget, {
+    __classname__: 'enchant.Action',
     /**
      * @name enchant.Action
      * @class
@@ -9918,6 +9951,7 @@ enchant.Action = enchant.Class.create(enchant.ActionEventTarget, {
  * @scope enchant.ParallelAction.prototype
  */
 enchant.ParallelAction = enchant.Class.create(enchant.Action, {
+    __classname__: 'enchant.ParallelAction',
     /**
      * @name enchant.ParallelAction
      * @class
@@ -10016,6 +10050,7 @@ enchant.ParallelAction = enchant.Class.create(enchant.Action, {
  * @scope enchant.Tween.prototype
  */
 enchant.Tween = enchant.Class.create(enchant.Action, {
+    __classname__: 'enchant.Tween',
     /**
      * @name enchant.Tween
      * @class
