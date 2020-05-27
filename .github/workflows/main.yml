@@ -35,6 +35,9 @@ jobs:
     - run: sudo apt install tree
     - run: tree ../artifact
 
+    - name: Move artifact directory inside project directory to create artifact
+      run: mv ../artifact ./
+
     - name: Compute commit short SHA
       id: shortsha
       run: echo "::set-output name=value::$(git rev-parse --short HEAD)"
@@ -42,4 +45,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: enchantjs-${{ steps.shortsha.outputs.value }}
-        path: ../artifact
+        path: artifact
