@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DomManager.getNextManager()</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../../build/enchant.js"></script>
+    <script>
+        // prerequisite
+        enchant();
+        core = new Core();
+        // end prerequisite
+
+        var scene = new DOMScene(),
+            group1 = new Group(),
+            group2 = new Group();
+        scene.addChild(group1);
+        scene.addChild(group2);
+        group1._domManager.getNextManager(group1._domManager)
+    </script>
+</body>
+
+</html>

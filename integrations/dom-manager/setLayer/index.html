@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DomManager.setLayer()</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../../build/enchant.js"></script>
+    <script>
+        // prerequisite
+        enchant();
+        core = new Core();
+        // end prerequisite
+
+        var group = new Group(),
+            child1 = new Node(),
+            child2 = new Node();
+        group.addChild(child1);
+        group.addChild(child2);
+        enchant.DomLayer._attachDomManager(group, function () { }, function () { });
+        var domLayer = new DomLayer();
+        group._domManager.setLayer(domLayer);
+    </script>
+</body>
+
+</html>

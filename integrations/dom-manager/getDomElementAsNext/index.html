@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DomManager.getDomElementAsNext()</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../../build/enchant.js"></script>
+    <script>
+        // prerequisite
+        enchant();
+        core = new Core();
+        // group = new Group();
+        // DomLayer._attachDomManager(group, function () { }, function () { });
+        // end prerequisite
+
+        // var node1 = new Node(),
+        //     node2 = new Node();
+        // group.addChild(node1);
+        // group.addChild(node2);
+        // DomLayer._attachDomManager(group, function () { }, function () { });
+        // var elem = document.createElement('div');
+        // group._domManager._register(elem, node2._domManager.getDomElementAsNext());
+
+        var group = new Group(),
+            node1 = new Node(),
+            node2 = new Node();
+        group.addChild(node1);
+        group.addChild(node2);
+        DomLayer._attachDomManager(group, function () { }, function () { });
+    </script>
+</body>
+
+</html>

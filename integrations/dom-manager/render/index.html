@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DomManager.render()</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../../build/enchant.js"></script>
+    <script>
+        // prerequisite
+        enchant();
+        core = new Core();
+        // end prerequisite
+
+        var scene = DOMScene();
+        var label = new Label('test');
+        scene.addChild(label);
+        label._domManager.render([1, 0, 0, 1, 0, 0]);
+        label.rotate(90);
+        label._domManager.render([1, 0, 0, 1, 0, 0]);
+    </script>
+</body>
+
+</html>
