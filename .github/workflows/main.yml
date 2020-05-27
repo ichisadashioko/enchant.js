@@ -1,6 +1,6 @@
 name: Node.js CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,21 +13,34 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+
+    - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g grunt-cli@0.1.13
-    - run: npm install
-    - run: npm test
 
-    # create artifact
-    - run: mkdir -p artifact
-    - run: rsync -av --progress . ./artifact --exclude artifact --exclude node_modules --exclude .git
-    - run: sudo apt install tree
-    - run: tree artifact
-    - uses: actions/upload-artifact@v2
-      with:
-        name: enchantjs-${{ github.sha }}
-        # TODO update when update-artifact allow exluding files
-        path: artifact # include all the examples
+    - name: Install dependencies
+      run: npm install -g grunt-cli@0.1.13
+      run: npm install
+
+    - name: Build and run tests
+      run: npm test
+
+    - name: Create artifact
+      run: mkdir -p ../artifact
+      # include all the examples and source code
+      run: rsync -av --progress . ../artifact --exclude node_modules --exclude .git
+
+    - name: Show artifact structure
+      run: sudo apt install tree
+      run: tree ../artifact
+
+    - name: Compute commit short SHA
+      id: shortsha
+      run: echo "::set-output name=value::$(git rev-parse --short HEAD)"
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+        with:
+          name: enchantjs-${{ steps.shortsha.outputs.value }}
+          path: ../artifact
