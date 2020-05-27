@@ -39,8 +39,7 @@ jobs:
       id: shortsha
       run: echo "::set-output name=value::$(git rev-parse --short HEAD)"
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-        with:
-          name: enchantjs-${{ steps.shortsha.outputs.value }}
-          path: ../artifact
+    - uses: actions/upload-artifact@v2
+      with:
+        name: enchantjs-${{ steps.shortsha.outputs.value }}
+        path: ../artifact
