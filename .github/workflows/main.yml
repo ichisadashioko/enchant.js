@@ -19,21 +19,21 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install -g grunt-cli@0.1.13
-      run: npm install
+    # Install dependencies
+    - run: npm install -g grunt-cli@0.1.13
+    - run: npm install
 
     - name: Build and run tests
       run: npm test
 
-    - name: Create artifact
-      run: mkdir -p ../artifact
+    # Create artifact
+    - run: mkdir -p ../artifact
       # include all the examples and source code
-      run: rsync -av --progress . ../artifact --exclude node_modules --exclude .git
+    - run: rsync -av --progress . ../artifact --exclude node_modules --exclude .git
 
-    - name: Show artifact structure
-      run: sudo apt install tree
-      run: tree ../artifact
+    # Show artifact structure
+    - run: sudo apt install tree
+    - run: tree ../artifact
 
     - name: Compute commit short SHA
       id: shortsha
